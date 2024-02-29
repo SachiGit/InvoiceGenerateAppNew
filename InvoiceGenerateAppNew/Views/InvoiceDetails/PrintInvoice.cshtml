@@ -1,0 +1,26 @@
+﻿@model InvoiceGenerateAppNew.Models.InvoiceDetail
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice</title>
+    <!-- Add any necessary CSS styles for formatting the invoice -->
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <div>
+        <p>Invoice ID: @Model.InvoiceID</p>
+        <p>Customer: @Model.CustomerName</p>
+        <p>Item: @Model.Product</p>
+        <p>Quantity: @Model.Qty</p>
+        <p>Discount: @Model.Discounts</p>
+        <p>Date: @Model.TransDate.ToString()</p>
+        <!-- Display other invoice details -->
+    </div>
+    <!-- Add HTML for displaying other invoice details -->
+    <button onclick="window.print()">Print</button>
+</body>
+</html>
